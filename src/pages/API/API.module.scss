@@ -1,0 +1,141 @@
+$primary-color: #3b82f6;
+$text-color: #374151;
+$bg-color: #f8fafc;
+$border-color: #e5e7eb;
+
+.container {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $text-color;
+    margin: 0 0 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $text-color;
+    margin: 2rem 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $text-color;
+    margin: 1.5rem 0 1rem;
+  }
+
+  p {
+    color: lighten($text-color, 20%);
+    line-height: 1.6;
+    margin: 0 0 1rem;
+
+    code {
+      background-color: lighten($bg-color, 2%);
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+      color: $primary-color;
+    }
+  }
+
+  &:first-child {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.propsTable {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid $border-color;
+    font-size: 0.875rem;
+  }
+
+  th {
+    background-color: $bg-color;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  td {
+    color: lighten($text-color, 20%);
+
+    &:first-child {
+      font-weight: 500;
+      color: $text-color;
+    }
+
+    code {
+      background-color: lighten($bg-color, 2%);
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+      color: $primary-color;
+      font-family: ui-monospace, monospace;
+    }
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.customization {
+  background-color: white;
+  border: 1px solid $border-color;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.125rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    margin: 0.5rem 0;
+    color: lighten($text-color, 20%);
+    font-size: 0.875rem;
+
+    code {
+      background-color: lighten($bg-color, 2%);
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+      color: $primary-color;
+      font-family: ui-monospace, monospace;
+    }
+  }
+}

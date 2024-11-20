@@ -1,0 +1,37 @@
+# Source
+src
+public
+docs
+
+# Config files
+.github
+.vscode
+.eslintrc*
+.prettierrc*
+.gitignore
+.env*
+vite.config.ts
+tsconfig.json
+tsconfig.app.json
+tsconfig.node.json
+
+# Tests
+**/*.test.*
+**/*.spec.*
+coverage
+vitest.config.*
+
+# Development
+node_modules
+.cache
+.temp
+*.log
+.DS_Store
+
+# Editor
+.idea
+*.swp
+*.swo
+
+# Build artifacts
+dist/docs
