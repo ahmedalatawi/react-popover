@@ -24,7 +24,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: yarn ci
+        run: yarn install
 
       - name: Run tests
         run: yarn test -- --coverage
@@ -55,7 +55,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: yarn ci
+        run: yarn install
 
       - name: Build library
         run: yarn build:lib
