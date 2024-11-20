@@ -19,7 +19,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "test:coverage": "vitest run --coverage",
+    "coverage": "vitest run --coverage",
     "prepublishOnly": "npm run build:lib",
     "docs:dev": "vite",
     "docs:build": "vite build",

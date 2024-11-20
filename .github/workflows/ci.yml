@@ -27,7 +27,9 @@ jobs:
         run: yarn install
 
       - name: Run tests
-        run: yarn test --coverage
+        run: yarn test
+
+      # add test coverage step here:
 
       - name: Run lint
         run: yarn lint
