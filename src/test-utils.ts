@@ -1,7 +1,7 @@
-import { fireEvent as fEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 
-export const fireEvent = {
-  ...fEvent,
+export const fireEventFn = {
+  ...fireEvent,
   mouseDown: (element: Element) =>
     fireEvent(
       element,

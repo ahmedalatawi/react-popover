@@ -1,7 +1,7 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
-import { useClickOutside } from "./hooks";
+import { useClickOutside } from "../hooks/hooks";
 import { PopoverContent } from "./PopoverContent";
-import type { PopoverProps } from "./types";
+import type { PopoverProps } from "../types";
 import styles from "./Popover.module.scss";
 
 export const Popover: React.FC<PopoverProps> = ({

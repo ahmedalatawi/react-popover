@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
-import { calculatePosition } from "./utils";
-import type { PopoverProps, Coordinates, PopoverPlacement } from "./types";
+import { calculatePosition } from "../utils/utils";
+import type { PopoverProps, Coordinates, PopoverPlacement } from "../types";
 import styles from "./Popover.module.scss";
 
 interface PopoverContentProps extends Omit<PopoverProps, "trigger"> {
