@@ -28,6 +28,6 @@ vi.mock("react-dom", async () => {
   const actual = await vi.importActual("react-dom");
   return {
     ...actual,
-    createPortal: (node: any) => node,
+    createPortal: (node: object) => node,
   };
 });

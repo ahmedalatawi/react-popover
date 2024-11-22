@@ -26,7 +26,7 @@ export const fireEventFn = {
         cancelable: true,
       })
     ),
-  keyDown: (element: Element, options: any) =>
+  keyDown: (element: Element, options: object) =>
     fireEvent(
       element,
       new KeyboardEvent("keydown", {

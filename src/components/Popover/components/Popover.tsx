@@ -12,7 +12,6 @@ export const Popover: React.FC<PopoverProps> = ({
   className = "",
   containerClassName = "",
   contentClassName = "",
-  arrowClassName = "",
   open,
   onOpenChange,
   style,
@@ -172,7 +171,6 @@ export const Popover: React.FC<PopoverProps> = ({
         offset={offset}
         className={className}
         contentClassName={contentClassName}
-        arrowClassName={arrowClassName}
         triggerRef={triggerRef}
         contentRef={contentRef}
         isOpen={isOpen}

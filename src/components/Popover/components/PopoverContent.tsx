@@ -16,7 +16,6 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
   offset = 8,
   className = "",
   contentClassName = "",
-  arrowClassName = "",
   triggerRef,
   contentRef,
   isOpen,
@@ -24,7 +23,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
   autoPlacement = false,
   animated = false,
 }) => {
-  const localContentRef = useRef<HTMLDivElement>(null);
+  const localContentRef = useRef<HTMLDivElement | null>(null);
   const [position, setPosition] = useState<Coordinates>({ x: 0, y: 0 });
   const [currentPlacement, setCurrentPlacement] =
     useState<PopoverPlacement>(placement);
@@ -64,6 +63,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
     setPosition(newPosition);
     setCurrentPlacement(finalPlacement);
     return true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [placement, offset, autoPlacement]);
 
   useEffect(() => {
@@ -102,6 +102,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
       setPosition(newPosition);
       setCurrentPlacement(finalPlacement);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, placement, offset, autoPlacement]);
 
   useEffect(() => {

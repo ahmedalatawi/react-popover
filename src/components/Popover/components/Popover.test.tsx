@@ -240,7 +240,7 @@ describe("Popover Component", () => {
       // fireEvent.mouseDown(document.body);
 
       // Close popover
-      // FIXME: this
+      // FIXME: fix this
       // await waitFor(() => {
       //   expect(content?.getAttribute("class")).toMatch(/exit/gi);
       // });
