@@ -5,6 +5,7 @@ import { Settings, ChevronDown } from "lucide-react";
 import styles from "./Home.module.scss";
 
 const basicExample = `import { Popover } from '@atawi/react-popover';
+import '@atawi/react-popover/dist/style.css'; // Optional: Import default styles
 
 function App() {
   return (

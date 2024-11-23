@@ -4,7 +4,7 @@
 
 # React Popover Component
 
-A fully-featured, accessible, and customizable popover component for React apps.
+A lightweight, fully-featured, accessible, and customizable popover component for React apps.
 
 ## Features
 
@@ -18,6 +18,9 @@ A fully-featured, accessible, and customizable popover component for React apps.
 - 🖌️ Highly customizable styling
 - 📦 TypeScript support
 - ⚡ Optimized performance
+- ❌ No internal dependencies
+
+### [API documentation website](https://react-popover.netlify.app/)
 
 ## Installation
 
@@ -29,6 +32,7 @@ npm install @atawi/react-popover
 
 ```tsx
 import { Popover } from "@atawi/react-popover";
+import "@atawi/react-popover/dist/style.css"; // Optional: Import default styles
 
 function App() {
   return (

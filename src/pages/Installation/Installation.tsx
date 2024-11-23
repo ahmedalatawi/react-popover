@@ -9,7 +9,7 @@ const yarnInstall = `yarn add @atawi/react-popover`;
 const pnpmInstall = `pnpm add @atawi/react-popover`;
 
 const basicUsage = `import { Popover } from '@atawi/react-popover';
-import '@atawi/react-popover/styles.css'; // Optional: Import default styles
+import '@atawi/react-popover/dist/style.css'; // Optional: Import default styles
 
 function App() {
   return (
