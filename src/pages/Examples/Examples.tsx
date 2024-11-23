@@ -111,6 +111,7 @@ export function Examples() {
                 </div>
               }
               placement="top"
+              animated
             />
           </div>
           <CodeBlock code={basicExample} />

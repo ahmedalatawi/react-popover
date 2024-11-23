@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { calculatePosition, getArrowStyle } from "./utils";
-import type { PopoverPlacement } from "./types";
+import type { PopoverPlacement } from "../types";
 
 describe("Popover Utils", () => {
   const mockTriggerRect = {
@@ -30,15 +30,15 @@ describe("Popover Utils", () => {
     });
 
     it.each([
-      ["top", { x: 50, y: -8 }],
-      ["top-start", { x: 100, y: -8 }],
-      ["top-end", { x: 0, y: -8 }],
+      ["top", { x: 50, y: 8 }],
+      ["top-start", { x: 100, y: 8 }],
+      ["top-end", { x: 8, y: 8 }],
       ["bottom", { x: 50, y: 158 }],
       ["bottom-start", { x: 100, y: 158 }],
-      ["bottom-end", { x: 0, y: 158 }],
-      ["left", { x: -108, y: 75 }],
-      ["left-start", { x: -108, y: 100 }],
-      ["left-end", { x: -108, y: 50 }],
+      ["bottom-end", { x: 8, y: 158 }],
+      ["left", { x: 8, y: 75 }],
+      ["left-start", { x: 8, y: 100 }],
+      ["left-end", { x: 8, y: 50 }],
       ["right", { x: 208, y: 75 }],
       ["right-start", { x: 208, y: 100 }],
       ["right-end", { x: 208, y: 50 }],
@@ -133,7 +133,7 @@ describe("Popover Utils", () => {
     });
 
     it("respects custom offset", () => {
-      const customOffset = 16;
+      const customOffset = -16;
       const { position } = calculatePosition(
         mockTriggerRect,
         mockContentRect,

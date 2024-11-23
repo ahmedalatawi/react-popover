@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
-import { calculatePosition } from "./utils";
-import type { PopoverProps, Coordinates, PopoverPlacement } from "./types";
+import { calculatePosition } from "../utils/utils";
+import type { PopoverProps, Coordinates, PopoverPlacement } from "../types";
 import styles from "./Popover.module.scss";
 
 interface PopoverContentProps extends Omit<PopoverProps, "trigger"> {
   triggerRef: React.RefObject<HTMLElement>;
-  contentRef: React.RefObject<HTMLElement>;
+  contentRef: React.RefObject<HTMLDivElement>;
   isOpen: boolean;
 }
 
@@ -16,7 +16,6 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
   offset = 8,
   className = "",
   contentClassName = "",
-  arrowClassName = "",
   triggerRef,
   contentRef,
   isOpen,
@@ -24,7 +23,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
   autoPlacement = false,
   animated = false,
 }) => {
-  const localContentRef = useRef<HTMLDivElement>(null);
+  const localContentRef = useRef<HTMLDivElement | null>(null);
   const [position, setPosition] = useState<Coordinates>({ x: 0, y: 0 });
   const [currentPlacement, setCurrentPlacement] =
     useState<PopoverPlacement>(placement);
@@ -37,9 +36,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
   const setRefs = useCallback(
     (element: HTMLDivElement | null) => {
       localContentRef.current = element;
-      if (typeof contentRef === "function") {
-        contentRef(element);
-      } else if (contentRef) {
+      if (contentRef) {
         (contentRef as React.MutableRefObject<HTMLDivElement | null>).current =
           element;
       }
@@ -64,6 +61,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
     setPosition(newPosition);
     setCurrentPlacement(finalPlacement);
     return true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [placement, offset, autoPlacement]);
 
   useEffect(() => {
@@ -102,6 +100,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
       setPosition(newPosition);
       setCurrentPlacement(finalPlacement);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, placement, offset, autoPlacement]);
 
   useEffect(() => {
