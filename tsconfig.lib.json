@@ -4,9 +4,7 @@
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
-    "sourceMap": true,
-    "noEmit": false,
-    "emitDeclarationOnly": true
+    "sourceMap": true
   },
   "include": ["src/components/Popover/**/*"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx"]
