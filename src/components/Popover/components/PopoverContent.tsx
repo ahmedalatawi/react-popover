@@ -10,7 +10,7 @@ interface PopoverContentProps extends Omit<PopoverProps, "trigger"> {
   isOpen: boolean;
 }
 
-export const PopoverContent: React.FC<PopoverContentProps> = ({
+export const PopoverContent = ({
   content,
   placement = "top",
   offset = 8,
@@ -22,7 +22,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
   style,
   autoPlacement = false,
   animated = false,
-}) => {
+}: PopoverContentProps) => {
   const localContentRef = useRef<HTMLDivElement | null>(null);
   const [position, setPosition] = useState<Coordinates>({ x: 0, y: 0 });
   const [currentPlacement, setCurrentPlacement] =

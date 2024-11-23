@@ -1,10 +1,10 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
-import { useClickOutside } from "../hooks/hooks";
-import { PopoverContent } from "./PopoverContent";
-import type { PopoverProps } from "../types";
-import styles from "./Popover.module.scss";
+import { useClickOutside } from "./hooks/hooks";
+import { PopoverContent } from "./components/PopoverContent";
+import type { PopoverProps } from "./types";
+import styles from "./components/Popover.module.scss";
 
-export const Popover: React.FC<PopoverProps> = ({
+export const Popover = ({
   trigger,
   content,
   placement = "top",
@@ -22,7 +22,7 @@ export const Popover: React.FC<PopoverProps> = ({
   closeDelay = 400,
   closeOnScroll = false,
   closeOnResize = false,
-}) => {
+}: PopoverProps) => {
   const [internalOpen, setInternalOpen] = useState(false);
   const triggerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);

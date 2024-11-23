@@ -6,7 +6,7 @@
     "declarationDir": "dist",
     "sourceMap": true,
     "noEmit": false,
-    "allowImportingTsExtensions": false
+    "emitDeclarationOnly": true
   },
   "include": ["src/components/Popover/**/*"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx"]

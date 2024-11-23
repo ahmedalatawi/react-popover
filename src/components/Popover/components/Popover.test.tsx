@@ -7,7 +7,7 @@ import {
   waitFor,
 } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Popover } from "./Popover";
+import { Popover } from "../Popover";
 import "@testing-library/jest-dom";
 
 describe("Popover Component", () => {
