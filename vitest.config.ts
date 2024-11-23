@@ -13,15 +13,6 @@ export default defineConfig({
       provider: "v8",
       reporter: ["text", "json", "html", "lcov"],
       include: ["src/components/Popover"],
-      // exclude: [
-      //   "node_modules/**",
-      //   "dist/**",
-      //   "**/*.d.ts",
-      //   "**/*.test.{ts,tsx}",
-      //   "**/*.config.{ts,js}",
-      //   "src/test-utils.ts",
-      //   "src/setupTests.ts",
-      // ],
     },
   },
 });

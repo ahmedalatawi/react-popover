@@ -6,9 +6,7 @@ import styles from "./Popover.module.scss";
 
 interface PopoverContentProps extends Omit<PopoverProps, "trigger"> {
   triggerRef: React.RefObject<HTMLElement>;
-  contentRef: (
-    element: HTMLDivElement | null
-  ) => void | React.RefObject<HTMLElement>;
+  contentRef: React.RefObject<HTMLDivElement>;
   isOpen: boolean;
 }
 
@@ -38,9 +36,7 @@ export const PopoverContent: React.FC<PopoverContentProps> = ({
   const setRefs = useCallback(
     (element: HTMLDivElement | null) => {
       localContentRef.current = element;
-      if (typeof contentRef === "function") {
-        contentRef(element);
-      } else if (contentRef) {
+      if (contentRef) {
         (contentRef as React.MutableRefObject<HTMLDivElement | null>).current =
           element;
       }
