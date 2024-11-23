@@ -18,7 +18,7 @@ export function Layout() {
             <NavLink to="/accessibility">Accessibility</NavLink>
           </nav>
           <a
-            href="https://github.com/yourusername/react-popover"
+            href="https://github.com/ahmedalatawi/react-popover"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.github}
