@@ -73,12 +73,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atawi/react-popover.git"
+    "url": "git+https://github.com/ahmedalatawi/react-popover.git"
   },
   "bugs": {
-    "url": "https://github.com/atawi/react-popover/issues"
+    "url": "https://github.com/ahmedalatawi/react-popover/issues"
   },
-  "homepage": "https://github.com/atawi/react-popover#readme",
+  "homepage": "https://github.com/ahmedalatawi/react-popover#readme",
   "publishConfig": {
     "access": "public"
   }

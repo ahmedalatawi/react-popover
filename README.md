@@ -52,7 +52,6 @@ function App() {
 | `className`          | `string`                             | `''`      | Class name for the popover wrapper    |
 | `containerClassName` | `string`                             | `''`      | Class name for the container          |
 | `contentClassName`   | `string`                             | `''`      | Class name for the content wrapper    |
-| `arrowClassName`     | `string`                             | `''`      | Class name for the arrow              |
 | `open`               | `boolean`                            | -         | Control popover visibility externally |
 | `onOpenChange`       | `(open: boolean) => void`            | -         | Callback when visibility changes      |
 | `style`              | `CSSProperties`                      | -         | Additional styles for the popover     |
