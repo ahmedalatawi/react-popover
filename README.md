@@ -18,7 +18,7 @@ A lightweight, fully-featured, accessible, and customizable popover component fo
 - 🖌️ Highly customizable styling
 - 📦 TypeScript support
 - ⚡ Optimized performance
-- ❌ No internal dependencies
+- ❌ No external dependencies
 
 ### [API documentation website](https://react-popover.netlify.app/)
 
