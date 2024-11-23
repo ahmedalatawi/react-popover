@@ -1,3 +1,7 @@
+![](https://github.com/AhmedAlatawi/react-popover/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/github/ahmedalatawi/react-popover/graph/badge.svg?token=8MBZ57Y4WA)](https://codecov.io/github/ahmedalatawi/react-popover)
+[![License: MIT](https://img.shields.io/github/license/AhmedAlatawi/react-popover)](https://github.com/AhmedAlatawi/react-popover/blob/master/LICENSE)
+
 # React Popover Component
 
 A fully-featured, accessible, and customizable popover component for React apps.
