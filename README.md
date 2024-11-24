@@ -138,7 +138,6 @@ function ControlledExample() {
   content="Custom styled content"
   className="custom-popover"
   contentClassName="custom-content"
-  arrowClassName="custom-arrow"
   style={{ maxWidth: "300px" }}
 />
 ```

@@ -44,7 +44,6 @@ const customStyles = `<Popover
   content={<div>Custom styled content</div>}
   className="my-popover"
   contentClassName="my-popover-content"
-  arrowClassName="my-popover-arrow"
 />`;
 
 export function Installation() {

@@ -12,7 +12,6 @@ const propsExample = `interface PopoverProps {
   className?: string;
   containerClassName?: string;
   contentClassName?: string;
-  arrowClassName?: string;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   style?: CSSProperties;
@@ -59,7 +58,6 @@ const stylingExample = `<Popover
   content="Custom styled content"
   className="my-popover"
   contentClassName="my-popover-content"
-  arrowClassName="my-popover-arrow"
   style={{ maxWidth: '300px' }}
 />`;
 
@@ -171,18 +169,6 @@ export function API() {
                   <code>''</code>
                 </td>
                 <td>Class name for the content wrapper</td>
-              </tr>
-              <tr>
-                <td>
-                  <code>arrowClassName</code>
-                </td>
-                <td>
-                  <code>string</code>
-                </td>
-                <td>
-                  <code>''</code>
-                </td>
-                <td>Class name for the arrow element</td>
               </tr>
               <tr>
                 <td>
@@ -334,9 +320,6 @@ export function API() {
             </li>
             <li>
               <code>contentClassName</code>: Styles the content wrapper
-            </li>
-            <li>
-              <code>arrowClassName</code>: Styles the arrow element
             </li>
           </ul>
 
