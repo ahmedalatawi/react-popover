@@ -56,6 +56,9 @@ function App() {
 | `className`          | `string`                             | `''`      | Class name for the popover wrapper    |
 | `containerClassName` | `string`                             | `''`      | Class name for the container          |
 | `contentClassName`   | `string`                             | `''`      | Class name for the content wrapper    |
+| `animatedClassName`  | `string`                             | `''`      | Custom class name for animated state  |
+| `enterClassName`     | `string`                             | `''`      | Custom class name for enter animation |
+| `exitClassName`      | `string`                             | `''`      | Custom class name for exit animation  |
 | `open`               | `boolean`                            | -         | Control popover visibility externally |
 | `onOpenChange`       | `(open: boolean) => void`            | -         | Callback when visibility changes      |
 | `style`              | `CSSProperties`                      | -         | Additional styles for the popover     |
@@ -142,6 +145,35 @@ function ControlledExample() {
 />
 ```
 
+### Custom Animations
+
+```tsx
+<Popover
+  trigger={<button>Custom Animation</button>}
+  content="Smoothly animated content"
+  animated
+  animatedClassName="my-popover-animated"
+  enterClassName="my-popover-enter"
+  exitClassName="my-popover-exit"
+/>
+```
+
+```css
+.my-popover-animated {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.my-popover-enter {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.my-popover-exit {
+  opacity: 0;
+  transform: scale(0.9) translateY(-8px);
+}
+```
+
 ## Placement Options
 
 The `placement` prop accepts the following values:
@@ -171,6 +203,16 @@ The component uses CSS modules and provides several class names for customizatio
 - `.animated` - Applied when animations are enabled
 - `.enter` - Applied during enter animation
 - `.exit` - Applied during exit animation
+
+## Custom Animation Classes
+
+For complete control over animations, use the animation className props:
+
+- `animatedClassName` - Replaces the default animated class
+- `enterClassName` - Replaces the default enter class
+- `exitClassName` - Replaces the default exit class
+
+This allows you to bypass CSS modules hashing and use your own class names.
 
 ## Accessibility
 

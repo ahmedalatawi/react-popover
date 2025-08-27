@@ -12,6 +12,9 @@ const propsExample = `interface PopoverProps {
   className?: string;
   containerClassName?: string;
   contentClassName?: string;
+  animatedClassName?: string;
+  enterClassName?: string;
+  exitClassName?: string;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   style?: CSSProperties;
@@ -53,12 +56,23 @@ const controlledExample = `function ControlledPopover() {
   );
 }`;
 
-const stylingExample = `<Popover
+const stylingExample = `// Basic styling
+<Popover
   trigger={<button>Styled</button>}
   content="Custom styled content"
   className="my-popover"
   contentClassName="my-popover-content"
   style={{ maxWidth: '300px' }}
+/>
+
+// Custom animations
+<Popover
+  trigger={<button>Custom Animation</button>}
+  content="Animated content"
+  animated
+  animatedClassName="my-animated"
+  enterClassName="my-enter"
+  exitClassName="my-exit"
 />`;
 
 export function API() {
@@ -169,6 +183,42 @@ export function API() {
                   <code>''</code>
                 </td>
                 <td>Class name for the content wrapper</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>animatedClassName</code>
+                </td>
+                <td>
+                  <code>string</code>
+                </td>
+                <td>
+                  <code>''</code>
+                </td>
+                <td>Custom class name for animated state</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>enterClassName</code>
+                </td>
+                <td>
+                  <code>string</code>
+                </td>
+                <td>
+                  <code>''</code>
+                </td>
+                <td>Custom class name for enter animation</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>exitClassName</code>
+                </td>
+                <td>
+                  <code>string</code>
+                </td>
+                <td>
+                  <code>''</code>
+                </td>
+                <td>Custom class name for exit animation</td>
               </tr>
               <tr>
                 <td>
@@ -320,6 +370,15 @@ export function API() {
             </li>
             <li>
               <code>contentClassName</code>: Styles the content wrapper
+            </li>
+            <li>
+              <code>animatedClassName</code>: Custom class for animated state
+            </li>
+            <li>
+              <code>enterClassName</code>: Custom class for enter animation
+            </li>
+            <li>
+              <code>exitClassName</code>: Custom class for exit animation
             </li>
           </ul>
 

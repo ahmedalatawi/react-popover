@@ -16,6 +16,9 @@ export const PopoverContent = ({
   offset = 8,
   className = "",
   contentClassName = "",
+  animatedClassName = "",
+  enterClassName = "",
+  exitClassName = "",
   triggerRef,
   contentRef,
   isOpen,
@@ -150,8 +153,11 @@ export const PopoverContent = ({
 
   const contentClasses = [
     styles.content,
-    animated && styles.animated,
-    animated && (isVisible ? styles.enter : styles.exit),
+    animated && (animatedClassName || styles.animated),
+    animated &&
+      (isVisible
+        ? enterClassName || styles.enter
+        : exitClassName || styles.exit),
     className,
   ]
     .filter(Boolean)

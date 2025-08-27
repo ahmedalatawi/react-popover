@@ -29,6 +29,9 @@ export interface PopoverProps {
   className?: string;
   containerClassName?: string;
   contentClassName?: string;
+  animatedClassName?: string;
+  enterClassName?: string;
+  exitClassName?: string;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   style?: CSSProperties;

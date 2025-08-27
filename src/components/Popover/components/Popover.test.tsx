@@ -247,6 +247,51 @@ describe("Popover Component", () => {
 
       // expect(content).toHaveClass("exit");
     });
+
+    it("uses custom animation classes when provided", async () => {
+      render(
+        <Popover
+          trigger={<button>Click me</button>}
+          content={<div>Content</div>}
+          animated
+          animatedClassName="custom-animated"
+          enterClassName="custom-enter"
+          exitClassName="custom-exit"
+        />
+      );
+
+      await userEvent.click(screen.getByText("Click me"));
+
+      const content = screen.getByText("Content").parentElement?.parentElement;
+
+      await waitFor(() => {
+        expect(content?.getAttribute("class")).toMatch(/custom-animated/gi);
+        expect(content?.getAttribute("class")).toMatch(/custom-enter/gi);
+      });
+    });
+
+    it("falls back to default classes when custom classes are empty", async () => {
+      render(
+        <Popover
+          trigger={<button>Click me</button>}
+          content={<div>Content</div>}
+          animated
+          animatedClassName=""
+          enterClassName=""
+          exitClassName=""
+        />
+      );
+
+      await userEvent.click(screen.getByText("Click me"));
+
+      const content = screen.getByText("Content").parentElement?.parentElement;
+
+      // Open popover
+      await waitFor(() => {
+        expect(content?.getAttribute("class")).toMatch(/animated/gi);
+        expect(content?.getAttribute("class")).toMatch(/enter/gi);
+      });
+    });
   });
 
   describe("Accessibility", () => {

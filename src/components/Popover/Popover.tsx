@@ -12,6 +12,9 @@ export const Popover = ({
   className = "",
   containerClassName = "",
   contentClassName = "",
+  animatedClassName = "",
+  enterClassName = "",
+  exitClassName = "",
   open,
   onOpenChange,
   style,
@@ -171,6 +174,9 @@ export const Popover = ({
         offset={offset}
         className={className}
         contentClassName={contentClassName}
+        animatedClassName={animatedClassName}
+        enterClassName={enterClassName}
+        exitClassName={exitClassName}
         triggerRef={triggerRef}
         contentRef={contentRef}
         isOpen={isOpen}

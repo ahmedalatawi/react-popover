@@ -1,6 +1,6 @@
 {
   "name": "@atawi/react-popover",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A fully-featured, accessible, and customizable popover component for React applications",
   "type": "module",
   "main": "dist/index.js",

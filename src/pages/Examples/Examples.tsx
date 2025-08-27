@@ -69,6 +69,31 @@ const menuExample = `<Popover
   closeOnScroll
 />`;
 
+const customAnimationExample = `<Popover
+  trigger={<button>Custom Animation</button>}
+  content="Smoothly animated content"
+  placement="top"
+  animated
+  animatedClassName="my-popover-animated"
+  enterClassName="my-popover-enter"
+  exitClassName="my-popover-exit"
+/>
+
+/* CSS */
+.my-popover-animated {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.my-popover-enter {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.my-popover-exit {
+  opacity: 0;
+  transform: scale(0.9) translateY(-8px);
+}`;
+
 export function Examples() {
   const [placement, setPlacement] = useState<PopoverPlacement>("top");
 
@@ -282,6 +307,35 @@ export function Examples() {
             />
           </div>
           <CodeBlock code={menuExample} />
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Custom Animations</h2>
+        <p>
+          Use custom animation classes for complete control over enter/exit
+          animations.
+        </p>
+
+        <div className={styles.demo}>
+          <div className={styles.example}>
+            <Popover
+              trigger={
+                <button className={styles.button}>Custom Animation</button>
+              }
+              content={
+                <div className={styles.content}>
+                  <p>Smoothly animated content with custom classes</p>
+                </div>
+              }
+              placement="top"
+              animated
+              animatedClassName={styles.customAnimated}
+              enterClassName={styles.customEnter}
+              exitClassName={styles.customExit}
+            />
+          </div>
+          <CodeBlock code={customAnimationExample} />
         </div>
       </section>
     </div>
