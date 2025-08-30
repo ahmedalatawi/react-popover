@@ -1,21 +1,22 @@
+@import "../../styles/theme";
+
 $header-height: 4rem;
 $footer-height: 3rem;
 $max-width: 64rem;
-$primary-color: #3b82f6;
-$bg-color: #f8fafc;
-$text-color: #374151;
-$border-color: #e5e7eb;
 
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .header {
   height: $header-height;
-  background-color: white;
-  border-bottom: 1px solid $border-color;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -35,7 +36,7 @@ $border-color: #e5e7eb;
   h1 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: $text-color;
+    color: var(--text-primary);
     margin: 0;
   }
 
@@ -44,7 +45,7 @@ $border-color: #e5e7eb;
     gap: 1.5rem;
 
     a {
-      color: $text-color;
+      color: var(--text-primary);
       text-decoration: none;
       font-size: 0.875rem;
       font-weight: 500;
@@ -53,27 +54,42 @@ $border-color: #e5e7eb;
       transition: all 0.2s;
 
       &:hover {
-        color: $primary-color;
-        background-color: rgba($primary-color, 0.05);
+        color: var(--primary-color);
+        background-color: rgba(var(--primary-color), 0.05);
       }
 
       &.active {
-        color: $primary-color;
-        background-color: rgba($primary-color, 0.1);
+        color: var(--primary-color);
+        background-color: rgba(var(--primary-color), 0.1);
       }
     }
   }
 }
 
+.actions {
+  display: flex;
+
+  gap: 1rem;
+
+  align-items: center;
+}
+.themeToggle,
 .github {
-  color: $text-color;
+  color: var(--text-primary);
   padding: 0.5rem;
   border-radius: 9999px;
   transition: all 0.2s;
 
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &:hover {
-    color: $primary-color;
-    background-color: rgba($primary-color, 0.05);
+    color: var(--primary-color);
+    background-color: rgba(var(--primary-color), 0.05);
   }
 
   svg {
@@ -84,7 +100,7 @@ $border-color: #e5e7eb;
 
 .main {
   flex: 1;
-  background-color: $bg-color;
+  background-color: var(--bg-primary);
   padding-top: $header-height;
   padding-bottom: $footer-height;
 }
@@ -97,8 +113,8 @@ $border-color: #e5e7eb;
 
 .footer {
   height: $footer-height;
-  background-color: white;
-  border-top: 1px solid $border-color;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -115,7 +131,7 @@ $border-color: #e5e7eb;
   justify-content: center;
 
   p {
-    color: $text-color;
+    color: var(--text-secondary);
     font-size: 0.875rem;
     margin: 0;
   }

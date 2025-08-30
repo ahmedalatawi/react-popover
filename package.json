@@ -52,6 +52,7 @@
     "lucide-react": "^0.460.0",
     "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.81.0",
+    "next-themes": "^0.2.1",
     "terser": "^5.36.0",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.15.0",
