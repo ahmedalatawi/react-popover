@@ -1,7 +1,4 @@
-$primary-color: #3b82f6;
-$text-color: #374151;
-$bg-color: #f8fafc;
-$border-color: #e5e7eb;
+@import "../../styles/theme";
 
 .container {
   max-width: 48rem;
@@ -14,42 +11,42 @@ $border-color: #e5e7eb;
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: $text-color;
+    color: var(--text-primary);
     margin: 0 0 1rem;
   }
 
   h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: $text-color;
+    color: var(--text-primary);
     margin: 2rem 0 1rem;
   }
 
   h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: $text-color;
+    color: var(--text-primary);
     margin: 1.5rem 0 1rem;
   }
 
   p {
-    color: lighten($text-color, 20%);
+    color: var(--text-secondary);
     line-height: 1.6;
     margin: 0 0 1rem;
 
     code {
-      background-color: lighten($bg-color, 2%);
+      background-color: var(--bg-primary);
       padding: 0.2rem 0.4rem;
       border-radius: 0.25rem;
       font-size: 0.875em;
-      color: $primary-color;
+      color: var(--primary-color);
     }
   }
 
   &:first-child {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--border-color);
   }
 }
 
@@ -60,39 +57,40 @@ $border-color: #e5e7eb;
   table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
-    border: 1px solid $border-color;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     overflow: hidden;
   }
 
-  th, td {
+  th,
+  td {
     padding: 0.75rem 1rem;
     text-align: left;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--border-color);
     font-size: 0.875rem;
   }
 
   th {
-    background-color: $bg-color;
+    background-color: var(--bg-primary);
     font-weight: 600;
-    color: $text-color;
+    color: var(--text-primary);
   }
 
   td {
-    color: lighten($text-color, 20%);
+    color: var(--text-secondary);
 
     &:first-child {
       font-weight: 500;
-      color: $text-color;
+      color: var(--text-primary);
     }
 
     code {
-      background-color: lighten($bg-color, 2%);
+      background-color: var(--bg-primary);
       padding: 0.2rem 0.4rem;
       border-radius: 0.25rem;
       font-size: 0.875em;
-      color: $primary-color;
+      color: var(--primary-color);
       font-family: ui-monospace, monospace;
     }
   }
@@ -103,8 +101,8 @@ $border-color: #e5e7eb;
 }
 
 .customization {
-  background-color: white;
-  border: 1px solid $border-color;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 0.75rem;
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -112,6 +110,7 @@ $border-color: #e5e7eb;
   h3 {
     margin-top: 0;
     font-size: 1.125rem;
+    color: var(--text-primary);
   }
 
   ul {
@@ -126,15 +125,15 @@ $border-color: #e5e7eb;
 
   li {
     margin: 0.5rem 0;
-    color: lighten($text-color, 20%);
+    color: var(--text-secondary);
     font-size: 0.875rem;
 
     code {
-      background-color: lighten($bg-color, 2%);
+      background-color: var(--bg-primary);
       padding: 0.2rem 0.4rem;
       border-radius: 0.25rem;
       font-size: 0.875em;
-      color: $primary-color;
+      color: var(--primary-color);
       font-family: ui-monospace, monospace;
     }
   }
