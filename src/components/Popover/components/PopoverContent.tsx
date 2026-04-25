@@ -44,7 +44,7 @@ export const PopoverContent = ({
           element;
       }
     },
-    [contentRef]
+    [contentRef],
   );
 
   const calculateInitialPosition = useCallback(() => {
@@ -58,7 +58,7 @@ export const PopoverContent = ({
       contentRect,
       placement,
       offset,
-      autoPlacement
+      autoPlacement,
     );
 
     setPosition(newPosition);
@@ -97,7 +97,7 @@ export const PopoverContent = ({
         contentRect,
         placement,
         offset,
-        autoPlacement
+        autoPlacement,
       );
 
       setPosition(newPosition);
@@ -179,7 +179,7 @@ export const PopoverContent = ({
             position: "fixed",
             left: position.x,
             top: position.y,
-            zIndex: 50,
+            zIndex: 2000,
             opacity: isPositioned ? undefined : 0,
             pointerEvents: isPositioned ? undefined : "none",
             willChange: "transform, opacity",
@@ -195,6 +195,6 @@ export const PopoverContent = ({
         </div>
       )}
     </>,
-    document.body
+    document.body,
   );
 };
